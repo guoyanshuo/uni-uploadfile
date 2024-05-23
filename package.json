@@ -1,0 +1,18 @@
+{
+  "name": "uni-uploadfile",
+  "version": "1.0.7",
+  "description": "uniapp上传文件方法封装，微信小程序上传文件支持保留原文件名上传",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts"
+    }
+  },
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+  }
+}
