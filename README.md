@@ -6,6 +6,9 @@ uniapp上传文件方法封装插件。主要支持了微信小程序保留原�
 
 ## 安装
 
+[![npm version](https://img.shields.io/npm/v/uni-uploadfile)](https://www.npmjs.com/package/uni-uploadfile)
+
+
 `npm i uni-uploadfile -S`
 
 ## 使用
