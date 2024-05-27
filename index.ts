@@ -47,7 +47,7 @@ const noWxUpload = (sendData: any) => {
   const { url, files, name, header, formData, success, fail } = sendData
 
   files.forEach((item: any) => {
-    item.name = 'multipartFiles'
+    item.name = name
   })
 
   // @ts-ignore
