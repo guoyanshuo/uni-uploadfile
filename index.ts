@@ -2,6 +2,32 @@ import FormData from './formData.js'
 
 
 const UniUploadFile = (sendData: any) => {
+  const { url, files, name, header, formData, success, fail, filePath } = sendData
+  if(filePath){
+    // @ts-ignore
+    uni.uploadFile({
+      url,
+      filePath: filePath,
+      name,
+      header: {
+        ...header,
+      },
+      formData,
+      success: (res: any) => {
+        if (!success) return
+        if (typeof res.data === 'string') {
+          res.data = JSON.parse(res.data)
+        }
+        success(res)
+      },
+      fail: (err: any) => {
+        if (!fail) return
+        fail(err)
+      },
+    })
+    return
+  }
+
   // #ifdef MP-WEIXIN
   wxUpload(sendData)
   // #endif
